@@ -4,6 +4,9 @@ The problem: you want the path `/` to give the contents of `public/index.html` a
 
 The solution:
 
+    require 'rubygems'
+	require 'sinatra-index'
+    
     class MyApp < Sinatra::Base
       register Sinatra::Index
       use_static_index 'index.html'
