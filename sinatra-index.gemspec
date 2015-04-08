@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "sinatra-index"
   
   s.add_dependency 'sinatra'
+  s.add_development_dependency 'rake'
   s.add_development_dependency 'test-unit'
   s.add_development_dependency 'rack-test'
 
