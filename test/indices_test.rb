@@ -2,7 +2,7 @@ require 'rubygems'
 require 'test/unit'
 require 'rack/test'
 require 'sinatra/base'
-require "./#{File.dirname(__FILE__)}/../lib/sinatra-index"
+require "#{File.dirname(__FILE__)}/../lib/sinatra-index"
 
 class TestIndices < Test::Unit::TestCase
   include Rack::Test::Methods
