@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sinatra-index (0.0.2)
+    sinatra-index (0.0.3)
       sinatra
 
 GEM
