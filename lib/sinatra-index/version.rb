@@ -1,5 +1,5 @@
 module Sinatra
   module Index
-    VERSION = "0.0.3"
+    VERSION = '1.1.0'
   end
 end
