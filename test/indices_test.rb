@@ -47,6 +47,12 @@ class TestIndices < Test::Unit::TestCase
 
     ENV['RACK_ENV'] = 'development'
   end
+
+  def test_https_scheme
+    get '/qux', {}, {'HTTPS' => 'on'}
+    assert_equal 302, last_response.status
+    assert_equal 'https://', last_response.header['Location'][0..7]
+  end
 end
 
 class TestApp < Sinatra::Base

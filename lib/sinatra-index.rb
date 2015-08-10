@@ -23,7 +23,13 @@ module Sinatra
               redirect_code = 302
             end
 
-            new_url = URI::HTTP.build(url_options)
+            # build the new URL based on the requested scheme
+            if request.scheme == 'https'
+              new_url = URI::HTTPS.build(url_options)
+            else
+              new_url = URI::HTTP.build(url_options)
+            end
+
             redirect new_url, redirect_code
           end
 
